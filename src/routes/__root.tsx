@@ -32,14 +32,13 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Watoto STEM | STEM Education for Children in Tanzania" },
+      { name: "description", content: "Watoto STEM introduces children in Tanzania to science and technology through hands-on learning and early exposure initiatives." },
+      { name: "author", content: "Watoto STEM" },
+      { property: "og:title", content: "Watoto STEM | STEM Education for Children in Tanzania" },
+      { property: "og:description", content: "Watoto STEM introduces children in Tanzania to science and technology through hands-on learning." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
@@ -68,5 +67,13 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
-  return <Outlet />;
+  return (
+    <>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </>
+  );
 }
