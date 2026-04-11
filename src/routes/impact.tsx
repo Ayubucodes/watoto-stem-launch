@@ -27,7 +27,7 @@ function ImpactPage() {
 
   return (
     <div>
-      {/* Hero */}
+      {/* Heero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 gradient-purple opacity-90" />
         <div className="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-primary-foreground/5 blur-3xl animate-float" />
