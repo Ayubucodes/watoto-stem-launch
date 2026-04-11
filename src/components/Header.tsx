@@ -2,13 +2,14 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoUrl from "@/assets/logo.svg";
 
 const navLinks = [
   { to: "/" as const, label: "Home" },
   { to: "/about" as const, label: "About" },
   { to: "/what-we-do" as const, label: "What We Do" },
   { to: "/impact" as const, label: "Our Impact" },
-  { to: "/get-involved" as const, label: "Get Involved" },
+  // { to: "/get-involved" as const, label: "Get Involved" },
   { to: "/contact" as const, label: "Contact" },
 ];
 
@@ -21,8 +22,12 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between md:h-18">
           <Link to="/" className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl gradient-purple">
-              <span className="text-sm font-bold text-primary-foreground">W</span>
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl">
+              <img
+                src={logoUrl}
+                alt="Watoto STEM"
+                className="h-8 w-8"
+              />
             </div>
             <span className="text-lg font-bold text-foreground">
               Watoto <span className="text-gradient-purple">STEM</span>
@@ -45,7 +50,7 @@ export function Header() {
 
           <div className="hidden md:block">
             <Link to="/get-involved">
-              <Button size="sm">Get Involved</Button>
+              <Button size="sm" className="cursor-pointer">Get Involved</Button>
             </Link>
           </div>
 

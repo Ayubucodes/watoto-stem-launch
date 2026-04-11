@@ -22,9 +22,9 @@ function AboutPage() {
         <div className="absolute inset-0 gradient-purple opacity-90" />
         <div className="absolute top-10 right-10 w-64 h-64 rounded-full bg-primary-foreground/5 blur-3xl animate-float" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block mb-4 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary-foreground/80 bg-primary-foreground/10 rounded-full border border-primary-foreground/20">
+          {/* <span className="inline-block mb-4 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary-foreground/80 bg-primary-foreground/10 rounded-full border border-primary-foreground/20">
             About Us
-          </span>
+          </span> */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
             About Watoto STEM
           </h1>
@@ -76,7 +76,7 @@ function AboutPage() {
       </section>
 
       {/* What We Believe */}
-      <section className="relative section-padding overflow-hidden">
+      {/* <section className="relative section-padding overflow-hidden">
         <div className="absolute inset-0 gradient-purple" />
         <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-primary-foreground/5 blur-3xl" />
         <div className="relative mx-auto max-w-3xl text-center">
@@ -87,7 +87,7 @@ function AboutPage() {
             light
           />
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

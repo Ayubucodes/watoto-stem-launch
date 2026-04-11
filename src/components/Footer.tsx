@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MapPin, Instagram, Linkedin, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import logoUrl from "@/assets/logo.svg";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -12,8 +13,12 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-foreground/20">
-                <span className="text-sm font-bold">W</span>
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white">
+                <img
+                  src={logoUrl}
+                  alt="Watoto STEM"
+                  className="h-6 w-6"
+                />
               </div>
               <span className="text-lg font-bold">Watoto STEM</span>
             </div>

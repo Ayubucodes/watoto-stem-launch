@@ -40,9 +40,6 @@ function ContactPage() {
         <div className="absolute inset-0 gradient-purple opacity-90" />
         <div className="absolute bottom-10 left-10 w-72 h-72 rounded-full bg-primary-foreground/5 blur-3xl animate-float" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block mb-4 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary-foreground/80 bg-primary-foreground/10 rounded-full border border-primary-foreground/20">
-            Get In Touch
-          </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
             Contact Us
           </h1>

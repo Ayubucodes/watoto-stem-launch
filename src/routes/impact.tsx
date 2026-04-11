@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { Users, School, BookOpen, Target, ArrowRight } from "lucide-react";
+import pic1 from "@/assets/pic1.jpeg";
+import pic2 from "@/assets/pic2.jpeg";
 
 export const Route = createFileRoute("/impact")({
   head: () => ({
@@ -30,9 +32,6 @@ function ImpactPage() {
         <div className="absolute inset-0 gradient-purple opacity-90" />
         <div className="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-primary-foreground/5 blur-3xl animate-float" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block mb-4 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary-foreground/80 bg-primary-foreground/10 rounded-full border border-primary-foreground/20">
-            Our Impact
-          </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
             Our Impact
           </h1>
@@ -66,30 +65,22 @@ function ImpactPage() {
         <div className="mx-auto max-w-7xl">
           <SectionHeading label="Gallery" title="Moments That Matter" description="Photos, videos, and stories from our work in schools across Tanzania." />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div key={item} className="aspect-video rounded-2xl bg-primary/10 flex items-center justify-center hover-lift">
-                <span className="text-primary/30 text-sm font-medium">Coming Soon</span>
+            {[pic1, pic2, pic1, pic2, pic1, pic2].map((src, i) => (
+              <div
+                key={i}
+                className="group relative aspect-video rounded-3xl overflow-hidden bg-primary/10 border border-primary/10 shadow-sm hover:shadow-lg transition-shadow duration-300 hover-lift"
+              >
+                <img
+                  src={src}
+                  alt="Watoto STEM gallery"
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
+                <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-primary-foreground/10" />
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="relative section-padding overflow-hidden">
-        <div className="absolute inset-0 gradient-purple" />
-        <div className="relative mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-            Help Us Reach More Children
-          </h2>
-          <p className="text-primary-foreground/80 text-lg mb-8">
-            Every contribution brings STEM education closer to another child.
-          </p>
-          <Link to="/get-involved">
-            <Button variant="hero-outline" size="xl">
-              Support the Initiative <ArrowRight size={18} />
-            </Button>
-          </Link>
         </div>
       </section>
     </div>

@@ -44,9 +44,6 @@ function GetInvolvedPage() {
         <div className="absolute inset-0 gradient-purple opacity-90" />
         <div className="absolute top-10 left-20 w-64 h-64 rounded-full bg-primary-foreground/5 blur-3xl animate-float" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block mb-4 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary-foreground/80 bg-primary-foreground/10 rounded-full border border-primary-foreground/20">
-            Take Action
-          </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
             Get Involved
           </h1>
@@ -77,24 +74,6 @@ function GetInvolvedPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="relative section-padding overflow-hidden">
-        <div className="absolute inset-0 gradient-purple" />
-        <div className="relative mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-            Every Contribution Counts
-          </h2>
-          <p className="text-primary-foreground/80 text-lg mb-8">
-            No matter how you choose to help, your support brings us one step closer to reaching every child.
-          </p>
-          <Link to="/contact">
-            <Button variant="hero-outline" size="xl">
-              Contact Us <ArrowRight size={18} />
-            </Button>
-          </Link>
         </div>
       </section>
     </div>

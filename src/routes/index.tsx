@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Lightbulb, School, Sparkles, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero-stem.png";
-import realityImg from "@/assets/reality-section.jpg";
+import realityImg from "@/assets/pic3.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -36,9 +36,6 @@ function HomePage() {
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-32 md:py-40">
           <div className="max-w-3xl animate-fade-up">
-            <span className="inline-block mb-6 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary-foreground/80 bg-primary-foreground/10 rounded-full border border-primary-foreground/20 backdrop-blur-sm">
-              STEM Education in Tanzania
-            </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight tracking-tight">
               Raising Africa's Next Generation of Thinkers, Builders, and Problem Solvers Through STEM.
             </h1>
@@ -47,12 +44,12 @@ function HomePage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link to="/get-involved">
-                <Button variant="hero" size="xl">
+                <Button variant="hero" size="xl" className="cursor-pointer">
                   Support a Child <ArrowRight size={18} />
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button variant="hero-outline" size="xl">
+                <Button variant="hero-outline" size="xl" className="cursor-pointer">
                   Partner With Us
                 </Button>
               </Link>
@@ -153,10 +150,10 @@ function HomePage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/get-involved">
-              <Button size="xl">Get Involved</Button>
+              <Button size="xl" className="cursor-pointer">Get Involved</Button>
             </Link>
             <Link to="/contact">
-              <Button variant="outline" size="xl">Support the Initiative</Button>
+              <Button variant="outline" size="xl" className="cursor-pointer">Support the Initiative</Button>
             </Link>
           </div>
         </div>
