@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Lightbulb, School, Sparkles, ArrowRight } from "lucide-react";
-import heroImg from "@/assets/hero-stem.jpg";
+import heroImg from "@/assets/hero-stem.png";
 import realityImg from "@/assets/reality-section.jpg";
 
 export const Route = createFileRoute("/")({
