@@ -25,8 +25,8 @@ function ContactPage() {
   };
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "hello@watotostem.org", href: "mailto:hello@watotostem.org" },
-    { icon: Phone, label: "Phone", value: "+255 700 000 000", href: "tel:+255700000000" },
+    { icon: Mail, label: "Email", value: "watotostemcharity.com", href: "mailto:watotostemcharity.com" },
+    { icon: Phone, label: "Phone", value: "+255 714 661 609", href: "tel:+255 714 661 609" },
     { icon: MapPin, label: "Location", value: "Dar es Salaam, Tanzania", href: undefined },
     { icon: Instagram, label: "Instagram", value: "@watotostem", href: "https://instagram.com/watotostem" },
     { icon: Linkedin, label: "LinkedIn", value: "Watoto STEM", href: "https://linkedin.com/company/watotostem" },

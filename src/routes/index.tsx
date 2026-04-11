@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Watoto STEM | STEM Education for Children in Tanzania" },
-      { name: "description", content: "Watoto STEM introduces children in Tanzania to science and technology through hands-on learning and early exposure initiatives." },
+      { name: "description", content: "Watoto STEM introduces children in Tanzania to science and technology through hands on learning and early exposure initiatives." },
       { name: "keywords", content: "STEM education in Tanzania, STEM for children Africa, Education charity Tanzania, Technology education Africa" },
       { property: "og:title", content: "Watoto STEM | STEM Education for Children in Tanzania" },
       { property: "og:description", content: "Watoto STEM introduces children in Tanzania to science and technology through hands-on learning and early exposure initiatives." },
@@ -40,7 +40,7 @@ function HomePage() {
               Raising Africa's Next Generation of Thinkers, Builders, and Problem Solvers Through STEM.
             </h1>
             <p className="mt-6 text-lg md:text-xl text-primary-foreground/80 leading-relaxed max-w-2xl">
-              We introduce children to science and technology at a young age through simple, hands-on STEM kits that spark curiosity and open possibilities.
+              We introduce children to science and technology at a young age through simple, hands on STEM kits that spark curiosity and open possibilities.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link to="/get-involved">
@@ -67,9 +67,7 @@ function HomePage() {
                 label="The Reality"
                 title="Access, Not Ability, Is the Barrier"
               />
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed -mt-8">
-                Many children across Africa grow up without early exposure to science and technology — not because they lack ability, but because they lack access. By the time they encounter it, it often feels distant or difficult to engage with.
-              </p>
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed -mt-8" dangerouslySetInnerHTML={{ __html: 'Many children across Africa grow up without early exposure to science and technology not because they lack ability, but because they lack <strong>access</strong>. By the time they encounter it, it often feels distant or difficult to engage with.' }} />
             </div>
             <div className="relative animate-fade-up" style={{ animationDelay: "0.3s" }}>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
@@ -89,7 +87,7 @@ function HomePage() {
           <SectionHeading
             label="What We Do"
             title="Simple Tools. Big Possibilities."
-            description="Watoto STEM introduces children to science, technology, engineering, and mathematics through simple, practical tools and guided experiences. We focus on early exposure — creating familiarity, confidence, and curiosity from a young age."
+            description="Watoto STEM introduces children to science, technology, engineering, and mathematics through simple, practical tools and guided experiences. We focus on early exposure creating familiarity, confidence, and <strong>curiosity</strong> from a young age."
           />
           <div className="mt-8">
             <Link to="/what-we-do" className="flex items-center justify-center gap-2 text-primary font-semibold hover:gap-3 transition-all">
@@ -108,16 +106,16 @@ function HomePage() {
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: Lightbulb, title: "STEM Kits", desc: "Hands-on learning tools designed to spark curiosity and let children experiment with science and technology." },
+              { icon: Lightbulb, title: "STEM Kits", desc: "Hands on learning tools designed to spark curiosity and let children experiment with science and technology." },
               { icon: School, title: "School Engagements", desc: "We work directly with schools to reach children where they are, making STEM accessible in familiar environments." },
-              { icon: Sparkles, title: "Early Exposure", desc: "We introduce concepts in a simple, relatable way — building familiarity and confidence from a young age." },
+              { icon: Sparkles, title: "Early Exposure", desc: "We introduce concepts in a <strong> simple, relatable </strong> way building familiarity and confidence from a young age." },
             ].map((item, i) => (
               <div key={item.title} className="glass-card-purple rounded-2xl p-8 hover-lift animate-fade-up" style={{ animationDelay: `${i * 0.15}s` }}>
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl gradient-purple mb-6">
                   <item.icon size={24} className="text-primary-foreground" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">{item.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
+                <p className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: item.desc }} />
               </div>
             ))}
           </div>
@@ -133,7 +131,7 @@ function HomePage() {
           <SectionHeading
             label="Why It Matters"
             title="The Future Is Being Shaped by Technology"
-            description="When children are exposed to it early, they don't just adapt to it — they grow into it with confidence. Technology education in Africa starts with early, meaningful access."
+            description="When children are exposed to it early, they don't just adapt to it they grow into it with confidence. Technology education in Africa starts with early, meaningful access."
             light
           />
         </div>

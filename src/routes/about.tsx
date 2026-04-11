@@ -35,20 +35,18 @@ function AboutPage() {
       </section>
 
       {/* Who We Are */}
-      <section className="section-padding bg-background">
+      <section className="py-16 md:py-16 bg-background">
         <div className="mx-auto max-w-4xl">
           <SectionHeading label="Who We Are" title="Our Mission" />
-          <p className="text-muted-foreground text-lg leading-relaxed text-center -mt-8">
-            Watoto STEM is an initiative focused on introducing children across Tanzania and Africa to science and technology in a simple, accessible, and engaging way. We believe that every child deserves the opportunity to explore, experiment, and discover the world of STEM — regardless of their background or location.
-          </p>
+          <p className="text-muted-foreground text-lg leading-relaxed text-center -mt-8" dangerouslySetInnerHTML={{ __html: 'Watoto STEM is an initiative focused on introducing children across Tanzania and Africa to science and technology in a <strong>simple, accessible, and engaging</strong> way.' }} />
         </div>
       </section>
 
       {/* Founder Story */}
-      <section className="section-padding gradient-purple-soft">
+      <section className="py-20 md:py-16 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="relative animate-fade-up">
+            <div className="relative animate-fade-up px-4 lg:px-0">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img src={founderImg} alt="Founder of Watoto STEM" className="w-full h-auto object-cover" loading="lazy" width={800} height={1024} />
               </div>
@@ -61,14 +59,18 @@ function AboutPage() {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  The idea behind Watoto STEM was born from a simple observation — that many children across Africa grow up without any early interaction with science and technology. Not because they lack curiosity or ability, but because the opportunity never reaches them.
+                  I grew up in a home where I was given the freedom to choose what I wanted to pursue in
+                  school. From an early age, I was introduced to reading, and naturally, I gravitated toward books
+                  and arts based subjects. That path eventually led me to study law.
                 </p>
                 <p>
-                  Our founder saw this gap firsthand and believed that if children were introduced to STEM concepts early, in ways that are simple, relatable, and hands-on, it could change the trajectory of their thinking and their futures.
+                  At the same time, I was fortunate to attend good schools in Tanzania that promoted science and
+                  had well equipped laboratories. The exposure was there but by then, I had already chosen my
+                  direction.
                 </p>
-                <p>
-                  Watoto STEM started with a vision to make that introduction possible — one child, one school, one community at a time.
-                </p>
+                <p dangerouslySetInnerHTML={{ __html: 'My career later took a different direction into banking, over time, I shifted towards <strong>innovation and technology in the finance sector.</strong> Along the way, I was also influenced by friends I encountered, who had passion for science and technology, which further shaped my perspective. And that\'s when the realization became clear.' }} />
+                <p dangerouslySetInnerHTML={{ __html: '<em>If I had been introduced to STEM in a more engaging and practical way earlier, I might have explored it differently.</em>' }} />
+                <p dangerouslySetInnerHTML={{ __html: 'Watoto STEM was created from that reflection. The goal is simple: to give African children the opportunity to <strong>experience STEM early</strong>, explore it freely, and grow into it with confidence.' }} />
               </div>
             </div>
           </div>

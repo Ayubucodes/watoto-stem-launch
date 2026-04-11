@@ -11,7 +11,7 @@ export const Route = createFileRoute("/impact")({
       { title: "Our Impact — Watoto STEM" },
       { name: "description", content: "See the impact Watoto STEM is making in Tanzania with STEM education for children." },
       { property: "og:title", content: "Our Impact — Watoto STEM" },
-      { property: "og:description", content: "Building meaningful, measurable impact — one school, one group of children at a time." },
+      { property: "og:description", content: "Building meaningful, measurable impact one school, one group of children at a time." },
     ],
   }),
   component: ImpactPage,
@@ -36,13 +36,13 @@ function ImpactPage() {
             Our Impact
           </h1>
           <p className="mt-4 text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            We are in the early stages of our journey, but every step we take is intentional. Our focus is to build meaningful, measurable impact — one school, one group of children at a time.
+            We are in the early stages of our journey, but every step we take is intentional. Our focus is to build meaningful, measurable impact one school, one group of children at a time.
           </p>
         </div>
       </section>
 
       {/* Stats */}
-      <section className="section-padding bg-background">
+      <section className="py-12 md:py-16 bg-background">
         <div className="mx-auto max-w-7xl">
           <SectionHeading label="By the Numbers" title="Growing Impact" />
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -61,7 +61,7 @@ function ImpactPage() {
       </section>
 
       {/* Gallery placeholder */}
-      <section className="section-padding">
+      <section className="py-12 md:py-16">
         <div className="mx-auto max-w-7xl">
           <SectionHeading label="Gallery" title="Moments That Matter" description="Photos, videos, and stories from our work in schools across Tanzania." />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">

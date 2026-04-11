@@ -17,9 +17,7 @@ export function SectionHeading({ label, title, description, light }: SectionHead
         {title}
       </h2>
       {description && (
-        <p className={`mt-4 text-base md:text-lg leading-relaxed ${light ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}>
-          {description}
-        </p>
+        <p className={`mt-4 text-base md:text-lg leading-relaxed ${light ? 'text-primary-foreground/80' : 'text-muted-foreground'}`} dangerouslySetInnerHTML={{ __html: description }} />
       )}
     </div>
   );

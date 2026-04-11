@@ -20,17 +20,17 @@ function WhatWeDoPage() {
     {
       icon: Lightbulb,
       title: "STEM Kits",
-      description: "We donate simple, hands-on STEM kits with advanced technology that allow children to experiment and learn by doing. Each kit is designed to introduce fundamental science and technology concepts in an engaging, accessible way.",
+      description: "We donate simple, hands on STEM kits with advanced technology that allow children to <strong>experiment and learn by doing.</strong> Each kit is designed to introduce fundamental science and technology concepts in an engaging, accessible way.",
     },
     {
       icon: School,
       title: "School Visits",
-      description: "We visit and nurture schools to introduce these kits directly to students in a familiar learning environment. By bringing STEM into the classroom, we meet children where they already are.",
+      description: "We visit and nurture schools to introduce these kits directly to students in a <strong>familiar learning environment.</strong> By bringing STEM into the classroom, we meet children where they already are.",
     },
     {
       icon: Sparkles,
       title: "Early Exposure Approach",
-      description: "Our focus is not complexity — it is introduction. We aim to spark curiosity that can grow over time. By starting simple, we build familiarity and confidence that lasts.",
+      description: "Our focus is not complexity it is introduction. We aim to spark curiosity that can grow over time. By starting simple, we build familiarity and confidence that lasts.",
     },
   ];
 
@@ -61,7 +61,7 @@ function WhatWeDoPage() {
                     <service.icon size={28} className="text-primary-foreground" />
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">{service.title}</h3>
-                  <p className="text-muted-foreground text-lg leading-relaxed">{service.description}</p>
+                  <p className="text-muted-foreground text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: service.description }} />
                 </div>
                 <div className={`glass-card-purple rounded-2xl p-12 flex items-center justify-center min-h-[250px] ${i % 2 === 1 ? "lg:order-1" : ""}`}>
                   <service.icon size={80} className="text-primary/30" />

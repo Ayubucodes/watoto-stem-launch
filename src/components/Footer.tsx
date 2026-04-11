@@ -33,7 +33,6 @@ export function Footer() {
               <Link to="/about" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">About Us</Link>
               <Link to="/what-we-do" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">What We Do</Link>
               <Link to="/impact" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Our Impact</Link>
-              <Link to="/get-involved" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Get Involved</Link>
               <Link to="/contact" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Contact</Link>
             </nav>
           </div>
@@ -42,10 +41,10 @@ export function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">Contact</h3>
             <div className="flex flex-col gap-3">
               <a href="mailto:hello@watotostem.org" className="flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                <Mail size={16} /> hello@watotostem.org
+                <Mail size={16} /> watotostemcharity.com
               </a>
               <a href="tel:+255700000000" className="flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                <Phone size={16} /> +255 700 000 000
+                <Phone size={16} /> +255 714 661 609
               </a>
               <span className="flex items-center gap-2 text-sm text-primary-foreground/70">
                 <MapPin size={16} /> Dar es Salaam, Tanzania
@@ -64,13 +63,13 @@ export function Footer() {
                 placeholder="Your email"
                 className="rounded-full bg-primary-foreground/10 border border-primary-foreground/20 px-4 py-2 text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-primary-foreground/30"
               />
-              <Button variant="hero-outline" size="sm" type="submit">Subscribe</Button>
+              <Button variant="hero-outline" size="sm" type="submit" className="cursor-pointer">Subscribe</Button>
             </form>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-primary-foreground/20 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-primary-foreground/50">© 2025 Watoto STEM. All rights reserved.</p>
+          <p className="text-sm text-primary-foreground/50">© 2026 Watoto STEM. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <a href="#" aria-label="Instagram" className="text-primary-foreground/50 hover:text-primary-foreground transition-colors"><Instagram size={20} /></a>
             <a href="#" aria-label="LinkedIn" className="text-primary-foreground/50 hover:text-primary-foreground transition-colors"><Linkedin size={20} /></a>
