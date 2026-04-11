@@ -61,7 +61,7 @@ function ImpactPage() {
       </section>
 
       {/* Gallery placeholder */}
-      <section className="section-padding gradient-purple-soft">
+      <section className="section-padding">
         <div className="mx-auto max-w-7xl">
           <SectionHeading label="Gallery" title="Moments That Matter" description="Photos, videos, and stories from our work in schools across Tanzania." />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
