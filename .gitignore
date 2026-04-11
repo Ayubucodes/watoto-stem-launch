@@ -15,8 +15,8 @@ node_modules
 *.local
 
 # Wrangler / Cloudflare
-.wrangler/
-.dev.vars
+# .wrangler/
+# .dev.vars
 
 # Editor directories and files
 .vscode/*
