@@ -20,13 +20,13 @@ function GetInvolvedPage() {
     {
       icon: Heart,
       title: "Support the Initiative",
-      description: "Contribute toward STEM kits and school programs. Every donation helps us reach more children with hands-on learning tools.",
+      description: "Contribute toward STEM kits and school programs. Every donation helps us reach more children with hands on learning tools.",
       cta: "Donate Now",
     },
     {
       icon: Handshake,
       title: "Partner With Us",
-      description: "Collaborate with us to expand our reach and impact. Whether you're an organization, school, or individual — there's a role for you.",
+      description: "Collaborate with us to expand our reach and impact. Whether you're an organization, school, or individual there's a role for you.",
       cta: "Become a Partner",
     },
     {
