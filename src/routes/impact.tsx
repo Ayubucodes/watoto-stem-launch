@@ -64,11 +64,11 @@ function ImpactPage() {
       <section className="py-12 md:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading label="Gallery" title="Moments That Matter" description="Photos, videos, and stories from our work in schools across Tanzania." />
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[pic1, pic2, pic1, pic2, pic1, pic2].map((src, i) => (
               <div
                 key={i}
-                className="group relative aspect-video rounded-3xl overflow-hidden bg-primary/10 border border-primary/10 shadow-sm hover:shadow-lg transition-shadow duration-300 hover-lift"
+                className="group relative aspect-video rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
               >
                 <img
                   src={src}
@@ -76,8 +76,6 @@ function ImpactPage() {
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
-                <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-primary-foreground/10" />
               </div>
             ))}
           </div>
