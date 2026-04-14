@@ -41,7 +41,7 @@ export function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">Contact</h3>
             <div className="flex flex-col gap-3">
               <a href="mailto:hello@watotostem.org" className="flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                <Mail size={16} /> watotostemcharity.com
+                <Mail size={16} /> partnerships@watotostemcharity.com
               </a>
               <a href="tel:+255700000000" className="flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                 <Phone size={16} /> +255 714 661 609
