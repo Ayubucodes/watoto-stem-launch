@@ -36,7 +36,7 @@ function AboutPage() {
 
       {/* Who We Are */}
       <section className="py-16 md:py-16 bg-background">
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <SectionHeading label="Who We Are" title="Our Mission" />
           <p className="text-muted-foreground text-lg leading-relaxed text-center -mt-8" dangerouslySetInnerHTML={{ __html: 'Watoto STEM is an initiative focused on introducing children across Tanzania and Africa to science and technology in a <strong>simple, accessible, and engaging</strong> way.' }} />
         </div>
@@ -44,9 +44,9 @@ function AboutPage() {
 
       {/* Founder Story */}
       <section className="py-20 md:py-16 bg-gradient-to-br from-purple-50 to-blue-50">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="relative animate-fade-up px-4 lg:px-0">
+            <div className="relative animate-fade-up">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img src={founderImg} alt="Founder of Watoto STEM" className="w-full h-auto object-cover" loading="lazy" width={800} height={1024} />
               </div>

@@ -43,7 +43,7 @@ function ImpactPage() {
 
       {/* Stats */}
       <section className="py-12 md:py-16 bg-background">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading label="By the Numbers" title="Growing Impact" />
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, i) => (
@@ -62,7 +62,7 @@ function ImpactPage() {
 
       {/* Gallery placeholder */}
       <section className="py-12 md:py-16">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading label="Gallery" title="Moments That Matter" description="Photos, videos, and stories from our work in schools across Tanzania." />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[pic1, pic2, pic1, pic2, pic1, pic2].map((src, i) => (
