@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Users, School, BookOpen, Target, ArrowRight } from "lucide-react";
 import pic1 from "@/assets/pic1.jpeg";
 import pic2 from "@/assets/pic2.jpeg";
+import video1 from "@/assets/video1.mp4";
 
 export const Route = createFileRoute("/impact")({
   head: () => ({
@@ -47,7 +48,7 @@ function ImpactPage() {
           <SectionHeading label="By the Numbers" title="Growing Impact" />
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, i) => (
-              <div key={stat.label} className="glass-card-purple rounded-2xl p-6 text-center hover-lift animate-fade-up" style={{ animationDelay: `${i * 0.1}s` }}>
+              <div key={stat.label} className="glass-card-purple rounded-2xl p-6 text-cupenter hover-lift animate-fade-" style={{ animationDelay: `${i * 0.1}s` }}>
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl gradient-purple mx-auto mb-4">
                   <stat.icon size={22} className="text-primary-foreground" />
                 </div>
@@ -64,18 +65,37 @@ function ImpactPage() {
       <section className="py-12 md:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading label="Gallery" title="Moments That Matter" description="Photos, videos, and stories from our work in schools across Tanzania." />
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[pic1, pic2, pic1, pic2, pic1, pic2].map((src, i) => (
+            {[
+              { type: "image", src: pic1 },
+              { type: "video", src: video1 },
+              { type: "image", src: pic2 },
+              { type: "image", src: pic2 },
+              { type: "image", src: pic1 },
+              { type: "image", src: pic2 },
+            ].map((item, i) => (
               <div
                 key={i}
-                className="group relative aspect-video rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+                className="group relative aspect-video rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-black"
               >
-                <img
-                  src={src}
-                  alt="Watoto STEM gallery"
-                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  loading="lazy"
-                />
+                {item.type === "video" ? (
+                  <video
+                    src={item.src}
+                    className="h-full w-full object-cover"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    poster={pic1}
+                  />
+                ) : (
+                  <img
+                    src={item.src}
+                    alt="Watoto STEM gallery"
+                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    loading="lazy"
+                  />
+                )}
               </div>
             ))}
           </div>
