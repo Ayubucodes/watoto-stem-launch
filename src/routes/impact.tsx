@@ -12,12 +12,14 @@ function GalleryVideo({ src }: { src: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
 
   function toggle() {
     const v = videoRef.current;
     if (!v) return;
     if (v.paused) {
       v.play();
+      setHasStarted(true);
       setPlaying(true);
     } else {
       v.pause();
@@ -54,7 +56,10 @@ function GalleryVideo({ src }: { src: string }) {
         className="h-full w-full object-cover"
         playsInline
         preload="metadata"
-        onPlay={() => setPlaying(true)}
+        onPlay={() => {
+          setPlaying(true);
+          setHasStarted(true);
+        }}
         onPause={() => setPlaying(false)}
         onEnded={() => setPlaying(false)}
       />
@@ -72,7 +77,10 @@ function GalleryVideo({ src }: { src: string }) {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute bottom-3 right-3 z-10 flex items-center gap-2">
+      <div
+        className={`pointer-events-none absolute bottom-3 right-3 z-10 flex items-center gap-2 transition-opacity duration-300 ${hasStarted ? "opacity-100" : "opacity-0"
+          }`}
+      >
         <button
           type="button"
           aria-label={playing ? "Pause video" : "Play video"}
