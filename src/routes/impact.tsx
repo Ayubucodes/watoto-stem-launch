@@ -2,13 +2,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useRef, useState } from "react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
-import { Users, School, BookOpen, Target, ArrowRight, Play, Pause } from "lucide-react";
+import { Users, School, BookOpen, Target, ArrowRight, Play } from "lucide-react";
 import pic1 from "@/assets/pic1.jpeg";
 import pic2 from "@/assets/pic2.jpeg";
 
 const video1 = "https://res.cloudinary.com/dx0ycahag/video/upload/v1776938707/video1_w7phbr.mp4";
 
-function GalleryVideo({ src, poster }: { src: string; poster: string }) {
+function GalleryVideo({ src }: { src: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
 
@@ -32,7 +32,7 @@ function GalleryVideo({ src, poster }: { src: string; poster: string }) {
         className="h-full w-full object-cover"
         playsInline
         preload="metadata"
-        poster={poster}
+        muted
         onEnded={() => setPlaying(false)}
       />
       {/* Overlay: always visible when paused, fades on play */}
@@ -126,13 +126,15 @@ function ImpactPage() {
                 className="group relative aspect-video rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-black"
               >
                 {item.type === "video" ? (
-                  <GalleryVideo src={item.src} poster={pic1} />
+                  <GalleryVideo src={item.src} />
                 ) : (
                   <img
                     src={item.src}
                     alt="Watoto STEM gallery"
                     className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     loading="lazy"
+                    decoding="async"
+                    fetchPriority="low"
                   />
                 )}
               </div>

@@ -16,6 +16,9 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Watoto STEM introduces children in Tanzania to science and technology through hands-on learning and early exposure initiatives." },
       { property: "og:type", content: "website" },
     ],
+    links: [
+      { rel: "preload", as: "image", href: heroImg },
+    ],
   }),
   component: HomePage,
 });
@@ -26,7 +29,7 @@ function HomePage() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="African children learning STEM" className="w-full h-full object-cover" width={1920} height={1080} />
+          <img src={heroImg} alt="African children learning STEM" className="w-full h-full object-cover" width={1920} height={1080} loading="eager" decoding="async" fetchPriority="high" />
           {/* Rich multi-layer overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-[#4347c7]/92 via-[#6367FF]/80 to-[#8ba1ff]/72" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#171a46]/55 via-transparent to-[#4a4ecc]/28" />
@@ -92,7 +95,7 @@ function HomePage() {
             </div>
             <div className="relative animate-fade-up" style={{ animationDelay: "0.3s" }}>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img src={realityImg} alt="Children learning with STEM kits in Tanzania" className="w-full h-auto object-cover" loading="lazy" width={1280} height={720} />
+                <img src={realityImg} alt="Children learning with STEM kits in Tanzania" className="w-full h-auto object-cover" loading="lazy" decoding="async" fetchPriority="low" width={1280} height={720} />
                 <div className="absolute inset-0 gradient-purple opacity-20 rounded-2xl" />
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl gradient-purple-soft opacity-60 -z-10" />

@@ -52,7 +52,7 @@ function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative animate-fade-up">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img src={founderImg} alt="Founder of Watoto STEM" className="w-full h-auto object-cover" loading="lazy" width={800} height={1024} />
+                <img src={founderImg} alt="Founder of Watoto STEM" className="w-full h-auto object-cover" loading="lazy" decoding="async" fetchPriority="low" width={800} height={1024} />
               </div>
               <div className="absolute -bottom-4 -left-4 w-24 h-24 rounded-2xl gradient-purple opacity-30 -z-10" />
             </div>
