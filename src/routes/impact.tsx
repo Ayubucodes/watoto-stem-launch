@@ -1,10 +1,52 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useRef, useState } from "react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
-import { Users, School, BookOpen, Target, ArrowRight } from "lucide-react";
+import { Users, School, BookOpen, Target, ArrowRight, Play, Pause } from "lucide-react";
 import pic1 from "@/assets/pic1.jpeg";
 import pic2 from "@/assets/pic2.jpeg";
-import video1 from "@/assets/video1.mp4";
+
+const video1 = "https://res.cloudinary.com/dx0ycahag/video/upload/v1776938707/video1_w7phbr.mp4";
+
+function GalleryVideo({ src, poster }: { src: string; poster: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [playing, setPlaying] = useState(false);
+
+  function toggle() {
+    const v = videoRef.current;
+    if (!v) return;
+    if (v.paused) {
+      v.play();
+      setPlaying(true);
+    } else {
+      v.pause();
+      setPlaying(false);
+    }
+  }
+
+  return (
+    <div className="relative h-full w-full cursor-pointer" onClick={toggle}>
+      <video
+        ref={videoRef}
+        src={src}
+        className="h-full w-full object-cover"
+        playsInline
+        preload="metadata"
+        poster={poster}
+        onEnded={() => setPlaying(false)}
+      />
+      {/* Overlay: always visible when paused, fades on play */}
+      <div
+        className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${playing ? "opacity-0 pointer-events-none" : "opacity-100 bg-black/30"
+          }`}
+      >
+        <div className="flex h-16 w-16 items-center justify-center rounded-full gradient-purple shadow-2xl shadow-primary/50 ring-4 ring-primary-foreground/30 transition-transform duration-200 hover:scale-110">
+          <Play size={28} className="text-primary-foreground ml-1" />
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export const Route = createFileRoute("/impact")({
   head: () => ({
@@ -80,14 +122,7 @@ function ImpactPage() {
                 className="group relative aspect-video rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-black"
               >
                 {item.type === "video" ? (
-                  <video
-                    src={item.src}
-                    className="h-full w-full object-cover"
-                    controls
-                    playsInline
-                    preload="metadata"
-                    poster={pic1}
-                  />
+                  <GalleryVideo src={item.src} poster={pic1} />
                 ) : (
                   <img
                     src={item.src}

@@ -27,29 +27,49 @@ function HomePage() {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroImg} alt="African children learning STEM" className="w-full h-full object-cover" width={1920} height={1080} />
-          <div className="absolute inset-0 gradient-purple opacity-85" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/30" />
+          {/* Rich multi-layer overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#4a4ecc]/90 via-[#6367FF]/75 to-[#8494FF]/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-[#4a4ecc]/30" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,219,253,0.25),_transparent_55%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(99,103,255,0.35),_transparent_60%)]" />
+          {/* Subtle grid texture */}
+          <div
+            className="absolute inset-0 opacity-[0.06] mix-blend-overlay"
+            style={{
+              backgroundImage:
+                "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
+              backgroundSize: "56px 56px",
+            }}
+          />
         </div>
         {/* Floating decorative elements */}
         <div className="absolute top-20 right-10 w-72 h-72 rounded-full bg-primary-foreground/5 blur-3xl animate-float" />
         <div className="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-pink-soft/10 blur-3xl animate-pulse-soft" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-32 md:py-40">
-          <div className="max-w-3xl animate-fade-up">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight tracking-tight">
-              Raising Africa's Next Generation of Thinkers, Builders, and Problem Solvers Through STEM.
+          <div className="max-w-4xl animate-fade-up">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-[1.1] tracking-tight [text-wrap:balance]">
+              Raising Africa's Next Generation of{" "}
+              <span className="bg-gradient-to-r from-white via-pink-soft to-white bg-clip-text text-transparent">
+                Thinkers, Builders,
+              </span>{" "}
+              and Problem Solvers Through STEM.
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-primary-foreground/80 leading-relaxed max-w-2xl">
-              We introduce children to science and technology at a young age through simple, hands on STEM kits that spark curiosity and open possibilities.
+
+            <p className="mt-8 text-lg md:text-xl text-primary-foreground/85 leading-relaxed max-w-2xl [text-wrap:pretty]">
+              We introduce children to science and technology at a young age
+              through simple, hands on STEM kits that spark curiosity and open
+              possibilities.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link to="/get-involved">
-                <Button variant="hero" size="xl" className="cursor-pointer">
+
+            <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-4">
+              <Link to="/get-involved" className="inline-flex">
+                <Button variant="hero" size="xl" className="w-full sm:w-auto cursor-pointer">
                   Support a Child <ArrowRight size={18} />
                 </Button>
               </Link>
-              <Link to="/contact">
-                <Button variant="hero-outline" size="xl" className="cursor-pointer">
+              <Link to="/contact" className="inline-flex">
+                <Button variant="hero-outline" size="xl" className="w-full sm:w-auto cursor-pointer">
                   Partner With Us
                 </Button>
               </Link>
