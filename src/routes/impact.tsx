@@ -32,7 +32,6 @@ function GalleryVideo({ src }: { src: string }) {
         className="h-full w-full object-cover"
         playsInline
         preload="metadata"
-        muted
         onEnded={() => setPlaying(false)}
       />
       {/* Overlay: always visible when paused, fades on play */}
