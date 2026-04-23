@@ -28,17 +28,18 @@ function HomePage() {
         <div className="absolute inset-0">
           <img src={heroImg} alt="African children learning STEM" className="w-full h-full object-cover" width={1920} height={1080} />
           {/* Rich multi-layer overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#4a4ecc]/90 via-[#6367FF]/75 to-[#8494FF]/70" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-[#4a4ecc]/30" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,219,253,0.25),_transparent_55%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(99,103,255,0.35),_transparent_60%)]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#4347c7]/92 via-[#6367FF]/80 to-[#8ba1ff]/72" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#171a46]/55 via-transparent to-[#4a4ecc]/28" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.16),_transparent_42%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(201,190,255,0.30),_transparent_48%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.08),_transparent_45%)]" />
           {/* Subtle grid texture */}
           <div
-            className="absolute inset-0 opacity-[0.06] mix-blend-overlay"
+            className="absolute inset-0 opacity-[0.12]"
             style={{
               backgroundImage:
-                "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
-              backgroundSize: "56px 56px",
+                "linear-gradient(to right, rgba(255,255,255,0.75) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.75) 1px, transparent 1px)",
+              backgroundSize: "48px 48px",
             }}
           />
         </div>

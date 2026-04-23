@@ -37,7 +37,11 @@ function ContactPage() {
     <div>
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 gradient-purple opacity-90" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#4347c7]/92 via-[#6367FF]/80 to-[#8ba1ff]/72" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#171a46]/55 via-transparent to-[#4a4ecc]/28" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.16),_transparent_42%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(201,190,255,0.30),_transparent_48%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.08),_transparent_45%)]" />
         <div className="absolute bottom-10 left-10 w-72 h-72 rounded-full bg-primary-foreground/5 blur-3xl animate-float" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
