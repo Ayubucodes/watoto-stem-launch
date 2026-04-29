@@ -7,6 +7,7 @@ import pic1 from "@/assets/pic1.jpeg";
 import pic2 from "@/assets/pic2.jpeg";
 
 const video1 = "https://res.cloudinary.com/dx0ycahag/video/upload/v1776938707/video1_w7phbr.mp4";
+const video2 = "https://res.cloudinary.com/dx0ycahag/video/upload/v1777469988/VID-20260429-WA0000_rsriqp.mp4";
 
 function GalleryVideo({ src }: { src: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -189,7 +190,7 @@ function ImpactPage() {
               { type: "image", src: pic2 },
               { type: "image", src: pic2 },
               { type: "image", src: pic1 },
-              { type: "image", src: pic2 },
+              { type: "video", src: video2 },
             ].map((item, i) => (
               <div
                 key={i}
