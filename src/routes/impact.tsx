@@ -1,123 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useRef, useState } from "react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
-import { Users, School, BookOpen, Target, ArrowRight, Play, Pause, Rewind, FastForward, Maximize } from "lucide-react";
+import { GalleryVideo } from "@/components/GalleryVideo";
+import { Users, School, BookOpen, Target, ArrowRight } from "lucide-react";
 import pic1 from "@/assets/pic1.jpeg";
 import pic2 from "@/assets/pic2.jpeg";
 
 const video1 = "https://res.cloudinary.com/dx0ycahag/video/upload/v1776938707/video1_w7phbr.mp4";
 const video2 = "https://res.cloudinary.com/dx0ycahag/video/upload/v1777469988/VID-20260429-WA0000_rsriqp.mp4";
-
-function GalleryVideo({ src }: { src: string }) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [playing, setPlaying] = useState(false);
-  const [hasStarted, setHasStarted] = useState(false);
-
-  function toggle() {
-    const v = videoRef.current;
-    if (!v) return;
-    if (v.paused) {
-      v.play();
-      setHasStarted(true);
-      setPlaying(true);
-    } else {
-      v.pause();
-      setPlaying(false);
-    }
-  }
-
-  function seekBy(seconds: number) {
-    const v = videoRef.current;
-    if (!v) return;
-    const nextTime = Math.max(0, Math.min(v.duration || Infinity, v.currentTime + seconds));
-    v.currentTime = nextTime;
-  }
-
-  async function toggleFullscreen() {
-    const container = containerRef.current;
-    if (!container) return;
-
-    if (document.fullscreenElement) {
-      await document.exitFullscreen();
-      return;
-    }
-
-    if (container.requestFullscreen) {
-      await container.requestFullscreen();
-    }
-  }
-
-  return (
-    <div ref={containerRef} className="relative h-full w-full">
-      <video
-        ref={videoRef}
-        src={src}
-        className="h-full w-full object-cover"
-        playsInline
-        preload="metadata"
-        onPlay={() => {
-          setPlaying(true);
-          setHasStarted(true);
-        }}
-        onPause={() => setPlaying(false)}
-        onEnded={() => setPlaying(false)}
-      />
-      {/* Overlay: visible when paused */}
-      <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${playing ? "opacity-0 pointer-events-none" : "opacity-100 bg-black/30"}`}>
-        <div className="flex h-16 w-16 items-center justify-center rounded-full gradient-purple shadow-2xl shadow-primary/50 ring-4 ring-primary-foreground/30 transition-transform duration-200 hover:scale-110">
-          <button
-            type="button"
-            aria-label="Play video"
-            onClick={toggle}
-            className="flex h-full w-full items-center justify-center"
-          >
-            <Play size={28} className="text-primary-foreground ml-1" />
-          </button>
-        </div>
-      </div>
-
-      <div
-        className={`pointer-events-none absolute bottom-3 right-3 z-10 flex items-center gap-2 transition-opacity duration-300 ${hasStarted ? "opacity-100" : "opacity-0"
-          }`}
-      >
-        <button
-          type="button"
-          aria-label={playing ? "Pause video" : "Play video"}
-          onClick={toggle}
-          className="pointer-events-auto rounded-full bg-black/55 p-2 text-white backdrop-blur-sm transition hover:bg-black/70"
-        >
-          {playing ? <Pause size={16} /> : <Play size={16} />}
-        </button>
-        <button
-          type="button"
-          aria-label="Rewind 10 seconds"
-          onClick={() => seekBy(-10)}
-          className="pointer-events-auto rounded-full bg-black/55 p-2 text-white backdrop-blur-sm transition hover:bg-black/70"
-        >
-          <Rewind size={16} />
-        </button>
-        <button
-          type="button"
-          aria-label="Forward 10 seconds"
-          onClick={() => seekBy(10)}
-          className="pointer-events-auto rounded-full bg-black/55 p-2 text-white backdrop-blur-sm transition hover:bg-black/70"
-        >
-          <FastForward size={16} />
-        </button>
-        <button
-          type="button"
-          aria-label="Toggle fullscreen"
-          onClick={toggleFullscreen}
-          className="pointer-events-auto rounded-full bg-black/55 p-2 text-white backdrop-blur-sm transition hover:bg-black/70"
-        >
-          <Maximize size={16} />
-        </button>
-      </div>
-    </div>
-  );
-}
 
 export const Route = createFileRoute("/impact")({
   head: () => ({
@@ -188,13 +78,13 @@ function ImpactPage() {
               { type: "image", src: pic1 },
               { type: "video", src: video1 },
               { type: "image", src: pic2 },
-              { type: "image", src: pic2 },
-              { type: "image", src: pic1 },
-              { type: "video", src: video2 },
+              // { type: "image", src: pic2 },
+              // { type: "image", src: pic1 },
+              // { type: "video", src: video2 },
             ].map((item, i) => (
               <div
                 key={i}
-                className="group relative aspect-video rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-black"
+                className="group relative aspect-[9/8] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-black"
               >
                 {item.type === "video" ? (
                   <GalleryVideo src={item.src} />

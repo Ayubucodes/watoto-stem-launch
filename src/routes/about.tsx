@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/SectionHeading";
-import founderImg from "@/assets/founder.jpg";
+import { GalleryVideo } from "@/components/GalleryVideo";
+
+const founderVideo = "https://res.cloudinary.com/dx0ycahag/video/upload/v1777469988/VID-20260429-WA0000_rsriqp.mp4";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -51,8 +53,8 @@ function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative animate-fade-up">
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img src={founderImg} alt="Founder of Watoto STEM" className="w-full h-auto object-cover" loading="lazy" decoding="async" fetchPriority="low" width={800} height={1024} />
+              <div className="relative aspect-[8/7] rounded-2xl overflow-hidden shadow-2xl bg-black">
+                <GalleryVideo src={founderVideo} />
               </div>
               <div className="absolute -bottom-4 -left-4 w-24 h-24 rounded-2xl gradient-purple opacity-30 -z-10" />
             </div>
